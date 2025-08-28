@@ -1,5 +1,5 @@
 module "db" {
-  source = "../../terraform-aws-securitygroup"
+  source = "../../expense-security-group"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for DB MySQL Instances"
