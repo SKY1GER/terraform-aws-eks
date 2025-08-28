@@ -15,5 +15,5 @@ variable "common_tags" {
 }
 
 variable "zone_name" {
-  default = "daws78s.online"
+  default = "daws80s.online"
 }
