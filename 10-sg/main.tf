@@ -9,7 +9,7 @@ module "db" {
 }
 
 module "ingress" {
-  source         = "git::https://github.com/daws-76s/terraform-aws-security-group.git?ref=main"
+  source = "../../expense-security-group"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for Ingress controller"
@@ -19,7 +19,7 @@ module "ingress" {
 }
 
 module "cluster" {
-  source         = "git::https://github.com/daws-76s/terraform-aws-security-group.git?ref=main"
+  source = "../../expense-security-group"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for EKS Control plane"
@@ -29,7 +29,7 @@ module "cluster" {
 }
 
 module "node" {
-  source         = "git::https://github.com/daws-76s/terraform-aws-security-group.git?ref=main"
+  source = "../../expense-security-group"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for EKS node"
@@ -39,7 +39,7 @@ module "node" {
 }
 
 module "bastion" {
-  source = "../../terraform-aws-securitygroup"
+  source = "../../expense-security-group"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for Bastion Instances"
@@ -49,7 +49,7 @@ module "bastion" {
 }
 
 module "vpn" {
-  source = "../../terraform-aws-securitygroup"
+  source = "../../expense-security-group"
   project_name = var.project_name
   environment = var.environment
   sg_description = "SG for VPN Instances"
