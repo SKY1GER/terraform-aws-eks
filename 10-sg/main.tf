@@ -56,7 +56,7 @@ module "vpn" {
   vpc_id = data.aws_ssm_parameter.vpc_id.value
   common_tags = var.common_tags
   sg_name = "vpn"
-  ingress_rules = var.vpn_sg_rules
+  inbound_rules = var.vpn_sg_rules
 }
 
 resource "aws_security_group_rule" "bastion_public" {
